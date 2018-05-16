@@ -1,3 +1,4 @@
 class User < ApplicationRecord
-  validates :email, format: /@spartaglobal.com/
+  validates :email, format: {with: /@spartaglobal.com/,
+    message: "must use '@spartaglobal.com'" }
 end
